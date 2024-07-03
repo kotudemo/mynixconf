@@ -281,6 +281,7 @@
                 packages = with pkgs; [
 		        vesktop
                     	spotify
+			vscode
 		        spicetify-cli
 		        _64gram
                 ];
