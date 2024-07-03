@@ -1,10 +1,16 @@
 # nixos config
 
-{ config, lib, pkgs, inputs, modulesPath, ... }:
-
-{
-    imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix") ];
+{ 
+	config, 
+	lib, 
+	pkgs, 
+	inputs, 
+	modulesPath, 
+	... 
+}: {
+    imports = [ 
+	(modulesPath + "/installer/scan/not-detected.nix") 
+    ];
 
     boot = {      
         extraModulePackages = [ ];                                # boot options
