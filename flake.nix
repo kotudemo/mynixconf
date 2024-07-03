@@ -62,7 +62,10 @@
         nixosConfigurations = {
             goidapc = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
-                modules = [ modules = [./configuration.nix chaotic.nixosModules.default ] ];
+                modules = [
+                    ./configuration.nix 
+                    chaotic.nixosModules.default
+                ];
             };
         };
     };
