@@ -1,10 +1,16 @@
 # nixos config
 
-{ config, lib, pkgs, inputs, modulesPath, ... }:
-
-{
-    imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix") ];
+{ 
+	config, 
+	lib, 
+	pkgs, 
+	inputs,
+	modulesPath, 
+	... 
+}: {
+    imports = [ 
+	(modulesPath + "/installer/scan/not-detected.nix") 
+    ];
 
     boot = {      
         extraModulePackages = [ ];                                # boot options
@@ -193,7 +199,7 @@
     environment = {
         systemPackages = with pkgs; [               # system-wide packages
 	        fish
-            home-manager
+            	home-manager
 	        gutenprint
 	        zip
 	        obs-studio
@@ -202,14 +208,14 @@
 	        gparted
 	        cups
 	        canon-cups-ufr2
-	        cups-filters
-            python3Full
-            nodejs
-            python.pkgs.pip
-            gcc
-            gnumake
-            jq
-            papirus-icon-theme
+		cups-filters
+            	python3Full
+            	nodejs
+            	python.pkgs.pip
+            	gcc
+            	gnumake
+            	jq
+            	papirus-icon-theme
         ];
         shellAliases =                             # global aliases
             let
@@ -236,34 +242,35 @@
                 hms = "home-manager switch --flake ${flakeDir}";
         };
         sessionVariables = {
-            WLR_NO_HARDWARE_CURSORS = "1";
-	        NIXOS_OZONE_WL = "1";
+        	WLR_NO_HARDWARE_CURSORS = "1";
+		NIXOS_OZONE_WL = "1";
         };
         variables = {
-            EDITOR = "nvim";
-            VISUAL = "nvim";
-            RANGER_LOAD_DEFAULT_RC = "FALSE";
-            QT_QPA_PLATFORMTHEME = "qt5ct";
-            #GSETTINGS_BACKEND = "keyfile";
+        	EDITOR = "nvim";
+        	VISUAL = "nvim";
+        	RANGER_LOAD_DEFAULT_RC = "FALSE";
+            	QT_QPA_PLATFORMTHEME = "qt5ct";
+        	# GSETTINGS_BACKEND = "keyfile";
         }; 
     };
-    fonts.packages = with pkgs; [
-        hack-font
-	    noto-fonts
-	    noto-fonts-emoji
-	    twemoji-color-font
-	    font-awesome
-	    jetbrains-mono
-	    powerline-fonts
-        powerline-symbols
-        nerdfonts
-        miracode
-        monocraft
-    ];
+    fonts = { 
+	packages = with pkgs; [
+        	hack-font
+	    	noto-fonts
+	    	noto-fonts-emoji
+	    	twemoji-color-font
+	    	font-awesome
+	    	jetbrains-mono
+	    	powerline-fonts
+        	powerline-symbols
+        	nerdfonts
+        	miracode
+        	monocraft
+    	];
+    };
     users = { 
         defaultUserShell = pkgs.fish;
-	    mutableUsers = true;
-        # if FALSE you'll need to add every new users with their passwords here.
+	mutableUsers = true; 
         users = {
             kd = {
                 description = "kotudemo aka GOIDALIZATOR BOL'SHIYE YAICA 777";
@@ -272,11 +279,10 @@
                 isNormalUser = true;
                 initialPassword = "password";
                 packages = with pkgs; [
-                    #discord
-		            vesktop
-                    spotify
-		            spicetify-cli
-		            _64gram
+		        vesktop
+                    	spotify
+		        spicetify-cli
+		        _64gram
                 ];
             };
         };
