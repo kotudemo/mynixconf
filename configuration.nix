@@ -274,6 +274,7 @@
                 packages = with pkgs; [
                     #discord
 		            vesktop
+			vscode
                     spotify
 		            spicetify-cli
 		            _64gram
