@@ -4,7 +4,7 @@
     inputs = {
         nixpkgs = { 
             url = "github:nixos/nixpkgs/nixos-unstable";
-            follows = "nixpkgs"
+            follows = "nixpkgs";
         };
 
         nixpkgs-master = {
