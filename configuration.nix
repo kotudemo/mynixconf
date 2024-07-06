@@ -108,13 +108,13 @@
         fstrim.enable = true;
         gvfs.enable = true;
         udisks2.enable = true;
-	    automatic-timezoned.enable = true;
+	automatic-timezoned.enable = true;
     };
     hardware = {
         cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
         bluetooth = { 
-            enable = false; 
-            powerOnBoot = false;
+            enable = true; 
+            powerOnBoot = true;
         };
 	    opengl = {
             enable = true;
