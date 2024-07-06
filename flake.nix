@@ -49,7 +49,7 @@
             url = "github:danth/stylix";
         };
         polymc = {
-            url = "github:PolyMC/PolyMC"
+            url = "github:PolyMC/PolyMC";
         };
         nixvim = {
             url = "github:nix-community/nixvim";
