@@ -5,9 +5,9 @@
         username = "kd";
         homeDirectory = "/home/kd";
         stateVersion = "24.05";
-        shellAliases = {
-           f = "nix run nixpkgs#fastfetch" 
-        };
+        #shellAliases = {
+        #   f = "nix run nixpkgs#fastfetch" 
+        #};
         packages = with pkgs; [
             # feel free to add here
         ];
