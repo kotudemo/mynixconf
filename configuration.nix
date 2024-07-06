@@ -279,11 +279,11 @@
                 isNormalUser = true;
                 initialPassword = "password";
                 packages = with pkgs; [
-		                  vesktop
-			                vscode
-                      spotify
-		                  spicetify-cli
-		                  _64gram
+		    vesktop
+		    vscode
+                    spotify
+		    spicetify-cli
+		    _64gram
                 ];
             };
         };
