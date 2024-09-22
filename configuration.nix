@@ -178,7 +178,7 @@
             allowBroken = false;            # restricts broken pkgs
             config.permittedInsecurePackages = ["python-2.7.18.8" ];
         };
-        overlays = [ (import (inputs.polymc + "/overlay.nix")) ];                   # overlays in case you have
+        overlays = [ inputs.polymc.overlay ];                  # overlays in case you have
         system = "x86_64-linux";            # system type
         hostPlatform = "x86_64-linux";      # platform type
     };
